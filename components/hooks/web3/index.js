@@ -22,7 +22,7 @@ const enhanceHook = (swrRes) => {
 };
 
 export const useAccount = () => {
-  const swrRes = enhanceHook(useHooks(({ useAccount }) => useAccount()));
+  const swrRes = enhanceHook(useHooks(({ useAccount }) => useAccount)());
   return {
     account: swrRes,
   };
@@ -47,7 +47,7 @@ export const useAdmin = ({ redirectTo }) => {
 };
 
 export const useNetwork = () => {
-  const swrRes = enhanceHook(useHooks(({ useNetwork }) => useNetwork()));
+  const swrRes = enhanceHook(useHooks(({ useNetwork }) => useNetwork)());
   return {
     network: swrRes,
   };
@@ -55,7 +55,7 @@ export const useNetwork = () => {
 
 export const useOwnedCourses = (...args) => {
   const swrRes = enhanceHook(
-    useHooks(({ useOwnedCourses }) => useOwnedCourses(...args))
+    useHooks(({ useOwnedCourses }) => useOwnedCourses)(...args)
   );
   return {
     ownedCourses: swrRes,
@@ -64,7 +64,7 @@ export const useOwnedCourses = (...args) => {
 
 export const useOwnedCourse = (...args) => {
   const swrRes = enhanceHook(
-    useHooks(({ useOwnedCourse }) => useOwnedCourse(...args))
+    useHooks(({ useOwnedCourse }) => useOwnedCourse)(...args)
   );
   return {
     ownedCourse: swrRes,
@@ -73,7 +73,7 @@ export const useOwnedCourse = (...args) => {
 
 export const useManagedCourses = (...args) => {
   const swrRes = enhanceHook(
-    useHooks(({ useManagedCourses }) => useManagedCourses(...args))
+    useHooks(({ useManagedCourses }) => useManagedCourses)(...args)
   );
   return {
     managedCourses: swrRes,
